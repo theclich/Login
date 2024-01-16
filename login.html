@@ -5,26 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body{
+        body {
+            margin: 0;
+            padding: 0;
             width: 100vh;
-            display: flexbox;
             background-image: url(https://i.pinimg.com/originals/74/c7/b1/74c7b1d24e9c04a053dfc3c565d4f0b0.jpg);
             background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
         }
-        Login{
-            background-color:  rgba(255,255,255,0.5) ;
+        
+        label, input {
+            font-size: 2em;
+            padding: 5px;
         }
 
+        #Login {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px; 
+            
+        }
+
+        #Login img {
+            width: 20%;
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
-        <div id="Login">
-            <form action="login.php">
-                <label for="email">E-mail</label>
-                <label type="email" id="email"></label>
-                <label for="contraseña">Contraseña</label>
-                <label type="password" id="contraseña"></label>
-            </form>
-        </div>
+    <div id="Login">
+        <img src="./img/5067875.png" alt="">
+        <form action="login.php">
+            <p>
+                <label for="email">E-mail: </label>
+                <input type="text" name="E-mail" maxlength="50" placeholder="Escríbe su E-mail" required>
+            </p>
+            <p>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" required>
+            </p>
+        </form>
+    </div>
 </body>
 </html>
